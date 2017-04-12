@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+<h1>電燈泡</h1>
+	<button onclick="document.getElementById('Image').src='image/pic_bulbon.gif'">turn on the light</button>
+	<img id="Image" src="image/pic_bulbon.gif">
+	<button onclick="document.getElementById('Image').src='image/pic_bulboff.gif'">Turn off the light</button>
+
+	<hr>
+
+<script>
+function plus(){
+var x, y
+x = parseInt(document.getElementById("X").value)
+y = parseInt(document.getElementById("Y").value)
+document.getElementById("result").innerHTML = x + y
+}
+function minus(){
+var x, y
+x = parseInt(document.getElementById("X").value)
+y = parseInt(document.getElementById("Y").value)
+document.getElementById("result").innerHTML = x - y
+} 
+function multi(){
+var x, y
+x = parseInt(document.getElementById("X").value)
+y = parseInt(document.getElementById("Y").value)
+document.getElementById("result").innerHTML = x * y
+}
+function devide(){
+var x, y
+x = parseInt(document.getElementById("X").value)
+y = parseInt(document.getElementById("Y").value)
+document.getElementById("result").innerHTML = x / y
+}
+function C(){
+var x, y
+x = document.getElementById("X").value = ""
+y = document.getElementById("Y").value = ""
+document.getElementById("result").innerHTML = ""
+}
+function judge(){
+var x = parseInt(document.getElementById("number").value)
+if (x < 60)
+	document.getElementById("result1").innerHTML = "不及格"
+else 
+	document.getElementById("result1").innerHTML = "及格"
+}
+</script>
+
+<h1>計算機</h1>
+
+Input X: <br>
+<input type="number" id="X"><br>
+Input Y: <br>
+<input type="value" id="Y"><br>
+<button onclick="plus()">Plus</button>
+<button onclick="minus()">Minus</button>
+<button onclick="multi()">Multi</button>
+<button onclick="devide()">Divide</button>
+<button onclick="C()">C</button>
+<br>
+Submit:
+<output id="result"></output>
+
+<hr>
+<h1>判斷</h1>
+Input Number: <br>
+<input type="number" id="number"><br>
+<button onclick="judge()">Judge</button>
+<output id="result1"></output>
+</body>
+</html>
